@@ -1,5 +1,5 @@
 
-public class Vehicle {
+public class Vehicle implements VehicleInterface{
 	private String VehicleName;
 	private String Color;
 	private double CarWeight;

@@ -1,11 +1,11 @@
 import java.util.UUID;
 
 
-public class Person {
+public class Person implements VehicleInterface{
 
 	private String FirstName;
 	private String LastName;
-	private int PersonID;
+	private UUID PersonID;
 	//private UUID PersonID;
 	
 	public String getFirstName() {
@@ -20,20 +20,20 @@ public class Person {
 	public void setLastName(String lastName) {
 		LastName = lastName;
 	}
-	public int getPersonID() {
+	public UUID getPersonID() {
 		return PersonID;
 	}
-	public void setPersonID(int personID) {
+	public void setPersonID(UUID personID) {
 		PersonID = personID;
 	}
-	public Person(String FirstName, String LastName, int PersonID){
+	public Person(String FirstName, String LastName, UUID PersonID){
 		this.setFirstName(FirstName);
 		this.setLastName(LastName);
-		//this.setPersonID(PersonID);
 		this.setPersonID(PersonID);
+	
 	}
 	public String toString(){
-		return "Person " + getFirstName() + " " + getLastName();
+		return "Person " + getFirstName() + " " + getLastName() + " " + getPersonID();
 		
 	}
 	
